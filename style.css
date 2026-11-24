@@ -44,19 +44,22 @@ button {
     padding: 20px;
     font-size: 1.2em;
     border: none;
-    background: #e3f2fd;  /* 改為淺藍色 */
+    background: #e3f2fd;
+    /* 改為淺藍色 */
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 button:hover {
-    background: #bbdefb;  /* hover時的顏色 */
+    background: #bbdefb;
+    /* hover時的顏色 */
 }
 
 /* 修改等號按鈕的顏色 */
 .equals {
-    background: #2196f3;  /* 改為藍色 */
+    background: #2196f3;
+    /* 改為藍色 */
     color: white;
     grid-row: span 2;
 }
@@ -100,4 +103,29 @@ button:active {
 
 .memory-btn:active {
     transform: scale(0.95);
+}
+
+/* 科學計算下拉選單樣式 */
+.scientific-dropdown {
+    margin-bottom: 10px;
+}
+
+.scientific-dropdown select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.scientific-dropdown select:focus {
+    outline: 2px solid #45a049;
+}
+
+.scientific-dropdown option {
+    background: white;
+    color: #333;
 }
