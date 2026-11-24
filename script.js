@@ -102,14 +102,18 @@ function hideMemoryIndicator() {
     display.style.borderLeft = 'none';
 }
 
+// 新增科學計算函數（下拉選單版本）
+function applyScientificOp() {
+    let select = document.getElementById('scientificOp');
+    let operation = select.value;
 
-// 新增科學計算函數
-function scientificCalc(operation) {
+    if (!operation) return;
+
     try {
         let value = eval(currentInput);
         let result;
-        
-        switch(operation) {
+
+        switch (operation) {
             case 'sin':
                 result = Math.sin(value * Math.PI / 180);
                 break;
@@ -131,9 +135,12 @@ function scientificCalc(operation) {
             default:
                 result = value;
         }
-        
+
         currentInput = result.toString();
         updateDisplay();
+
+        // 重置選單
+        select.value = '';
     } catch (error) {
         currentInput = 'Error';
         updateDisplay();
